@@ -1,0 +1,23 @@
+.auth-container {
+  min-height: calc(100vh - 65px);
+  display: flex; align-items: center; justify-content: center;
+  padding: 40px 20px;
+}
+.auth-card {
+  background: white; padding: 40px; border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1); width: 100%; max-width: 420px;
+}
+.auth-card h2 { font-size: 1.8rem; margin-bottom: 5px; }
+.auth-card > p { color: #666; margin-bottom: 25px; font-size: 15px; }
+.form-group { margin-bottom: 18px; }
+.form-group label { display: block; margin-bottom: 6px; font-weight: 500; color: #444; font-size: 14px; }
+.form-group input,
+.form-group select {
+  width: 100%; padding: 10px 14px; border: 1.5px solid #ddd;
+  border-radius: 8px; font-size: 15px; outline: none; transition: border 0.2s; background: white;
+}
+.form-group input:focus, .form-group select:focus { border-color: #2563eb; }
+.error-msg { background: #fee2e2; color: #dc2626; padding: 10px 14px; border-radius: 8px; margin-bottom: 15px; font-size: 14px; }
+.success-msg { background: #d1fae5; color: #059669; padding: 10px 14px; border-radius: 8px; margin-bottom: 15px; font-size: 14px; }
+.auth-footer { text-align: center; margin-top: 20px; color: #666; font-size: 14px; }
+.auth-footer a { color: #2563eb; font-weight: 500; }
