@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="form">
+  <input type="text" id="name" placeholder="Enter your name"/>
+  <br><br>
+  <input type="email" id="email" placeholder="Enter your email"/>
+  <br><br>
+  <button type="submit">Submit</button>
+</form>
+
+<p id="msg"></p>
+
+<script>
+document.getElementById("form").onsubmit = async (e) => {
+  e.preventDefault();
+
+  const res = await fetch(window.location.href, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      name: document.getElementById("name").value
+    })
+  });
+
+  document.getElementById("msg").innerText =
+    res.ok ? "Success!" : "Failed!";
+};
+</script>
+</body>
+</html>
